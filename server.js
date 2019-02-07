@@ -40,7 +40,7 @@ app.post('/dinfo',(req,res)=>{
         city : req.body.city,
         pincode : req.body.pincode
         }
-    MongoClient.connect('url', {useNewUrlParser : true}, (err, client)=> {
+    MongoClient.connect('mongodb://dba:dba123@ds125525.mlab.com:25525/blood-ebank', {useNewUrlParser : true}, (err, client)=> {
     if(err)
     {
         return console.log("unable to connect to DB");
@@ -87,7 +87,7 @@ app.post('/rinfo', (req,res)=>{
     }
 
     
-    MongoClient.connect('url', {useNewUrlParser : true}, (err, client)=> {
+    MongoClient.connect('mongodb://dba:dba123@ds125525.mlab.com:25525/blood-ebank', {useNewUrlParser : true}, (err, client)=> {
     if(err)
     {
         return console.log("unable to connect to DB");
