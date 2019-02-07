@@ -1,0 +1,27 @@
+.home_body{
+    background-image: url(../images/home.jpg);
+}
+
+.box{
+    margin-top : 100px;
+}
+
+
+.hder{
+    margin : 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 50px;
+}
+
+.dbutton,.rbutton{
+    
+    font-family: Georgia, serif;    
+    font-size: 20px;
+    width :  100px;
+
+}
+
+.anch{
+    color: white;
+}

@@ -1,0 +1,27 @@
+
+
+a:hover{
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+ .container:hover{
+    box-shadow: 0 0 25px rgba(12, 12, 12, 1);
+    border-radius: 3px;
+}
+
+.dbground{
+    background-image: url("../images/donate.jpg" );
+        top: 0;
+        left: 0;
+}
+
+ .rbground{
+    background-image: url("../images/receive.jpg");
+}
+
+#age{
+    width :  140px;
+}
+

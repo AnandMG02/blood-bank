@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <head>
+         {{> header}}
+         <link rel="stylesheet" type="text/css" href="../public/css/home.css">
+    </head>
+    <body class="rbground jumbotron">
+           {{> header1}}
+         
+        <div class="container">
+                <div class="row">
+                        <div class=" col "> <br>
+                                <a href="/" class="btn btn-info" role="button">Home</a>
+                                <a href="/donate" class="btn btn-info" role="button">Donate</a>
+                        </div>
+
+                </div><br><br>
+                
+        <form action="/rinfo" method="POST">
+                <div class="form-row">
+                        <div class="col">
+                          <label for="fname" > Name :</label>  
+                          <input name="rname" class="form-control" placeholder="Your Name" required>
+                        </div>
+                       
+                </div><br>
+                <div class="form-row">
+                        <div class="col-8 form-group">
+                        <label for="mobile">Mobile :</label>
+                        <input name="rmobile" class="form-control" id="mobile" pattern="[1-9]{1}[0-9]{9}"  placeholder="Enter Mobile Number" required >
+                        </div>
+                        <div class="col form-group">
+                        <label for="age">Age :</label>
+                        <input name="rage" class="form-control" id="age" placeholder="Your Age" required>
+                        </div>
+                        <div class="col form-group">
+                            <label for="bgroup">Needed Blood:</label>
+                            <select name="bgroup" class="form-control" id="bgroup" required >
+                                <option value="">Select Any</option>
+                                 <option value="A +ve">A +ve</option>
+                                <option value="A -ve">A -ve</option>
+                                <option value="B +ve">B +ve</option>
+                                <option value="B -ve">B -ve</option>
+                                <option value="AB +ve">AB +ve</option>
+                                <option value="AB -ve">AB -ve</option>
+                                <option value="O +ve">O +ve</option>
+                                <option value="O -ve">O -ve</option>
+                           </select>
+                        </div>
+                </div><br>
+                <div class="form-row">
+                    <div class="col-12"><h5>Select the Location where you need blood</h5></div>
+                    
+                        <div class="col-6">
+                          <label for="city">District :</label>
+                          <select name="district"class="form-control" id="state" required>
+                                {{> state}}
+                           </select>
+                        </div>
+                        <div class="col-6">
+                                <label for="taluk">Taluka :</label>
+                                <input name="taluka" class="form-control taluka" >
+                        </div>
+                </div><br>
+                <div class="form-row">
+                        <div class="col-7">
+                          <label for="city">City/Town/Village :</label>
+                          <input name="city" class="form-control" placeholder="City" required>
+                        </div>
+                        <div class="col-4">
+                        <label for="city">PinCode</label>
+                          <input name="pincode" class="form-control" placeholder="Optional" >
+                        </div>
+                </div><br>
+                        
+                    <br>       
+            <button type="submit" class="btn btn-primary">Find</button><br><br>
+          </form>
+        </div>  
+       
+    </body>
+    </html>

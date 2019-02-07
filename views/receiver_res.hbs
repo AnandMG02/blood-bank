@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    {{> header}}
+    <link rel="stylesheet" type="text/css" href="../public/css/home.css">
+</head>
+
+<body class="dbground">
+    {{> header1}}
+    <div class="container-fluid">
+        <div class="route">
+            <a href="/" class="btn btn-info" role="button">Home</a>
+            <a href="/receive" class="btn btn-info" role="button">Receive</a>
+    </div><br><br><br>
+    <p><h3> Hello {{rname}} , Please find the requested Information Below</h3></p><br><br>
+    <p>
+       <h5>Blood Group : {{rblood_group}}</h5> <br>
+       <h5>District : {{rdistrict}}</h5><br>
+
+
+        <div>
+            <table class="table table-striped">
+            <thead>
+                    <tr>
+                        <th>Taluka</th>
+                        <th>City</th>
+                        <th>Pincode</th>
+                        <th>Mobile</th>
+                    </tr>
+            </thead>
+            <tbody> {{#each result}}
+                <tr>
+                    <td> {{this.Taluka}} </td> 
+                    <td> {{this.City}} </td>
+                    <td> {{this.Pincode}} </td>
+                    <td> {{this.Mobile}} </td> 
+                </tr>{{/each }}
+               
+            </tbody>
+        </table>
+
+        </div>
+
+
+    </p>
+    </div>
+
+</body>
+
+</html>
