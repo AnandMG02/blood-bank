@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 hbs.handlebars = require('handlebars');
+const port = process.env.PORT || 3000 ;
 
 app.use('/public',express.static("public"));
 app.set('view engine', 'hbs');
@@ -121,4 +122,6 @@ app.post('/rinfo', (req,res)=>{
 });
 });
 
-app.listen(3000);
+app.listen(port, ()=>{
+    console.log(`The Server is running in ${port}` );
+});
