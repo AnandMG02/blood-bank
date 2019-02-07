@@ -40,12 +40,12 @@ app.post('/dinfo',(req,res)=>{
         city : req.body.city,
         pincode : req.body.pincode
         }
-    MongoClient.connect('mongodb://localhost:27017/bloodbank', {useNewUrlParser : true}, (err, client)=> {
+    MongoClient.connect('mongodb://dba:dba123@ds125525.mlab.com:25525/blood-ebank', {useNewUrlParser : true}, (err, client)=> {
     if(err)
     {
         return console.log("unable to connect to DB");
     }
-    db = client.db('bloodbank');
+    db = client.db('blood-ebank');
 
     db.collection('donate').insertOne({
         Name : data.name ,
@@ -87,12 +87,12 @@ app.post('/rinfo', (req,res)=>{
     }
 
     
-    MongoClient.connect('mongodb://localhost:27017/bloodbank', {useNewUrlParser : true}, (err, client)=> {
+    MongoClient.connect('mongodb://dba:dba123@ds125525.mlab.com:25525/blood-ebank', {useNewUrlParser : true}, (err, client)=> {
     if(err)
     {
         return console.log("unable to connect to DB");
     }
-    db = client.db('bloodbank');
+    db = client.db('blood-ebank');
 
     db.collection('receiver').insertOne({
         Name : item.name ,
